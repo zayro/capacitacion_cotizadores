@@ -1,0 +1,22 @@
+{
+  "name": "angular-seed",
+  "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation",
+  "main": "",
+  "authors": [
+    "Minko Gechev <mgechev>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mgechev/angular-seed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.11.3",
+    "webcomponentsjs": "^1.0.0",
+    "paper-card": "PolymerElements/paper-card#^1.0.0"
+  }
+}
