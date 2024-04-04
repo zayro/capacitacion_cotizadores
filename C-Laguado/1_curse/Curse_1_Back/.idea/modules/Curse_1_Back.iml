@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="root [file:/D:/workspace-sura/1_inicial/capacitacion_cotizadores/C-Laguado/1_curse/Curse_1_Back/]" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../target/scala-3.3.1/classes" />
+    <output-test url="file://$MODULE_DIR$/../../target/scala-3.3.1/test-classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.13.10:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scala-lang:scala3-library_3:3.3.1:jar" level="project" />
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="c0fe2daa-29da-4adc-9e1e-62c8332e7ee3" />
+  </component>
+</module>

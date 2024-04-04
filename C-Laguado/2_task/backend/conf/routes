@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+
+GET     /todo                       controllers.TodoController.getAll
+GET     /todo/:itemId               controllers.TodoController.getById(itemId: Long)
+
+GET     /articles                   controllers.ArticlesController.getAll
+GET     /articles/:id               controllers.ArticlesController.getById(id: Long)
+GET     /articles-active            controllers.ArticlesController.getAllActive
+GET     /articles/type/:idType      controllers.ArticlesController.getByIdType(idType: Long)
