@@ -3,10 +3,21 @@ package controllers
 
 import play.api.mvc._
 import play.api.db._
-import play.libs.Json
+import play.api.libs.json.{JsValue, Json, Writes}
 
 import javax.inject._
 
+
+case class Country(code: String, name: String)
+
+object Country {
+  implicit val countryWrites: Writes[Country] = new Writes[Country] {
+    def writes(country: Country): JsValue = Json.obj(
+      "code" -> country.code,
+      "name" -> country.name
+    )
+  }
+}
 @Singleton
 class QueryController @Inject()(db: Database) extends Controller {
 
@@ -26,17 +37,19 @@ class QueryController @Inject()(db: Database) extends Controller {
       // Procesar el resultado del conjunto de resultados
       val countries = Iterator.continually(resultSet).takeWhile(_.next()).map { rs =>
         // Obtener los datos de cada fila del ResultSet y construir un objeto Country
-        val code = rs.getInt("code")
+        val code = rs.getString("code")
         val name = rs.getString("name")
         // Supongamos que tienes una case class Country(id: Int, name: String)
 
         print(code)
 
+        Country(code,  name)
+
       }.toList
 
       // Ahora tienes la lista de países (countries)
       // Puedes devolverla, por ejemplo, en formato JSON
-      Ok("Query Exitosa")
+      Ok(Json.toJson(countries))
     }
   }
 
