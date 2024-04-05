@@ -8,6 +8,13 @@ import scala.collection.mutable
 
 case class TodoListItem(id: Long, description: String, isItDone: Boolean)
 
+
+// Definir una case class para representar la estructura del JSON que esperas recibir
+case class Datos(parametro1: String, parametro2: String)
+
+
+
+
 @Singleton
 class TodoController  @Inject() extends Controller {
 
@@ -54,5 +61,27 @@ class TodoController  @Inject() extends Controller {
   }
 
 
+
+  // Método para manejar la solicitud POST
+  def createJson = Action(parse.json) { request =>
+
+    // Crear un implicits para convertir el JSON a la case class Datos
+    implicit val formatoDatos = Json.format[Datos]
+
+    // Obtener los datos JSON de la solicitud
+    val datosResult = request.body.validate[Datos]
+
+    datosResult.fold(
+      // En caso de error en el JSON recibido
+      errors => {
+        BadRequest(Json.obj("mensaje" -> "Error en el JSON recibido"))
+      },
+      // En caso de que el JSON se valide correctamente
+      datos => {
+        // Realizar alguna lógica con los datos recibidos
+        Ok(Json.obj("mensaje" -> s"Datos recibidos: ${datos.parametro1}, ${datos.parametro2}"))
+      }
+    )
+  }
 
 }

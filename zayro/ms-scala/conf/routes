@@ -9,6 +9,7 @@ GET     /                           controllers.HomeController.index
 GET     /todo                       controllers.TodoController.getAll
 GET     /todo/:itemId               controllers.TodoController.getById(itemId: Long)
 POST    /todo                       controllers.TodoController.create
+POST    /todo/create                controllers.TodoController.createJson
 
 GET     /query                       controllers.QueryController.connect
 GET     /query/country               controllers.QueryController.country
