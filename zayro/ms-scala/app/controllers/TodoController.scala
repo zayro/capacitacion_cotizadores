@@ -34,6 +34,25 @@ class TodoController  @Inject() extends Controller {
   }
 
 
+  // Método para manejar la solicitud POST
+  def create = Action { implicit request: Request[AnyContent] =>
+    // Obtener los datos del cuerpo de la solicitud
+    val datos = request.body.asFormUrlEncoded
+
+    datos.map { args =>
+      // Manejar los datos de la solicitud POST
+      val parametro1 = args("parametro1").headOption.getOrElse("")
+      val parametro2 = args("parametro2").headOption.getOrElse("")
+
+      // Realizar alguna lógica con los parámetros recibidos
+      // Por ejemplo, puedes simplemente devolver una respuesta con los parámetros recibidos
+      Ok(s"Parámetro 1: $parametro1, Parámetro 2: $parametro2")
+    }.getOrElse {
+      // En caso de que no se puedan obtener los datos del cuerpo de la solicitud
+      BadRequest("Error: Los datos no fueron enviados correctamente")
+    }
+  }
+
 
 
 }
