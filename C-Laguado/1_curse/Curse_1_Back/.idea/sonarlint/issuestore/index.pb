@@ -1,8 +1,6 @@
 
 9
 	build.sbt,7\4\74b95601c3a6d9d565cd312fac64094ec0f9d847
-x
-Hsrc/main/scala/lectures/sec1absolutebasics/V02ValuesVariablesTypes.scala,0\5\051c364601a750538345d9876c3e398dcc397782
 o
 ?src/main/scala/lectures/sec1absolutebasics/V03Expressions.scala,8\5\854cd1cd6252cd7b78f919d873ed1740d4c7ddbd
 m
@@ -23,9 +21,3 @@ b
 2src/main/scala/lectures/sec2oop/V11PooBasic2.scala,3\3\33833f46d2842a13f668f1752e477d1de965ba12
 i
 9src/main/scala/lectures/sec2oop/V12MethodNotations1.scala,b\5\b5573a898a3a10db8f4293c7179d63c583f23bd1
-i
-9src/main/scala/lectures/sec2oop/V13MethodNotations2.scala,f\e\feb979e334bf8f413f90ca5c858786d132c13fc3
-`
-0src/main/scala/lectures/sec2oop/V14Objects.scala,9\8\98adc60dfe6c1fe0264fbc7590718d5c65c49c26
-e
-5src/main/scala/lectures/sec2oop/V15Inheritance1.scala,7\d\7d23ae866d26b74e7014497e6a3bc18b9b63926a

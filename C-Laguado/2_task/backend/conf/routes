@@ -7,8 +7,14 @@
 
 GET     /todo                       controllers.TodoController.getAll
 GET     /todo/:itemId               controllers.TodoController.getById(itemId: Long)
+POST    /todo                       controllers.TodoController.addNewItem
 
 GET     /articles                   controllers.ArticlesController.getAll
 GET     /articles/:id               controllers.ArticlesController.getById(id: Long)
 GET     /articles-active            controllers.ArticlesController.getAllActive
 GET     /articles/type/:idType      controllers.ArticlesController.getByIdType(idType: Long)
+# POST    /articles                   controllers.ArticlesController.addNewItem
+
+GET     /query                      controllers.QueryController.connect
+GET     /query/articles             controllers.QueryController.articlesGetAll
+GET     /query/articles/:id         controllers.QueryController.articlesById(id: Long)
