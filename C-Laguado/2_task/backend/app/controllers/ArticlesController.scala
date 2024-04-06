@@ -54,29 +54,4 @@ class ArticlesController  @Inject() extends Controller {
       Ok(Json.toJson(articlesByIdType))
     }
   }
-/*
-  def addNewItem() = Action { implicit request =>
-    val content = request.body
-    val jsonObject = content.asJson
-    val articlesItem: Option[NewArticleItem] =
-      jsonObject.flatMap(
-        Json.fromJson[NewArticleItem](_).asOpt
-      )
-  }
- */
-/*
-  def addNewItem() = Action { implicit request =>
-    // existing code
-    newArticlesItem match {
-      case Some(newItem) =>
-        val nextId = articles.map(_.id).max + 1
-        val toBeAdded = ArticlesItem(nextId, newItem.name, 1, true)
-        articles += toBeAdded
-        Created(Json.toJson(toBeAdded))
-      case None =>
-        BadRequest
-    }
-  }
-*/
-
 }

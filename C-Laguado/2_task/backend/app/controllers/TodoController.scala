@@ -34,49 +34,4 @@ class TodoController  @Inject() extends Controller {
       case None => NotFound
     }
   }
-/*
-  def addNewItem() = Action { implicit request =>
-    val content = request.body
-    val jsonObject = content.asJson
-    val todoListItem: Option[NewTodoListItem] =
-      jsonObject.flatMap(
-        Json.fromJson[NewTodoListItem](_).asOpt
-      )
-  }
-
-def addNewItem() = Action { implicit request =>
-  // existing code
-  val content = request.body
-  val jsonObject = content.asJson
-  todoListItem match {
-    case Some(newItem) =>
-      val nextId = todoList.map(_.id).max + 1
-      val toBeAdded = TodoListItem(nextId, newItem.description, false)
-      todoList += toBeAdded
-      Created(Json.toJson(toBeAdded))
-    case None =>
-      BadRequest
-  }
-}
-*/
-
-  def addNewItem2 = Action { request =>
-    val json = request.body.asJson.get
-    val stock = json.as[NewTodoListItem]
-    println("json : " + json)
-    println("stock : " + stock)
-    Ok("Ok....")
-  }
-
-  def addNewItem = Action { request =>
-    val postVals = request.body.asFormUrlEncoded
-    postVals.map { args =>
-      val description = args("description")
-      println("description : " + description)
-      //???
-    }.getOrElse("oooooo")
-    println("postVals : " + postVals)
-    Ok("Ok....")
-  }
-
 }
