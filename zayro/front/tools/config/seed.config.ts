@@ -66,6 +66,8 @@ export class SeedConfig {
    */
   PORT = argv['port'] || 5555;
 
+
+  VULCANIZE_SOURCE: any = []
   /**
    * The root folder of the project (up two levels from the current directory).
    */

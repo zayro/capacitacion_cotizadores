@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NameListService } from '../shared/name-list/name-list.service';
 
+import "../shared/bower/jquery/dist/jquery.min.js";
+
+declare var $: any; // Declara jQuery para que TypeScript lo reconozca
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -30,6 +33,9 @@ export class HomeComponent implements OnInit {
    */
   ngOnInit() {
     this.getNames();
+    $(document).ready(function(){
+      console.log('jQuery is working');
+    });
   }
 
   /**

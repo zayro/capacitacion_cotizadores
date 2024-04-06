@@ -1,4 +1,4 @@
 {
 "strict-ssl": false,
-"directory": "src/static/bower"
+"directory": "src/client/app/shared/bower"
 }

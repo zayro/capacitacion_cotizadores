@@ -17,6 +17,8 @@
   "dependencies": {
     "polymer": "^1.11.3",
     "webcomponentsjs": "^1.0.0",
-    "paper-card": "PolymerElements/paper-card#^1.0.0"
+    "paper-card": "PolymerElements/paper-card#^1.0.0",
+    "iron-icons": "^3.0.1",
+    "jquery": "^3.7.1"
   }
 }

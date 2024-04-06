@@ -12,7 +12,11 @@ export class ProjectConfig extends SeedConfig {
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
 
   constructor() {
+
+
     super();
+
+    this.VULCANIZE_SOURCE  = ['src/static/polymer.html'];
     // this.APP_TITLE = 'Put name of your app here';
     // this.GOOGLE_ANALYTICS_ID = 'Your site's ID';
 

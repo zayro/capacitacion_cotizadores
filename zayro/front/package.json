@@ -153,6 +153,8 @@
     "@angular/router": "^7.0.0",
     "@angular/service-worker": "^7.0.0",
     "@polymer/iron-icon": "^3.0.1",
+    "@polymer/polymer": "^3.5.1",
+    "@webcomponents/webcomponentsjs": "^2.8.0",
     "core-js": "2.6.4",
     "intl": "^1.2.5",
     "rxjs": "^6.2.2",

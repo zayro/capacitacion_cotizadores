@@ -51,7 +51,8 @@ test
 tmp
 cypress/videos
 
-src/static/bower/*
+
+**/bower/**
 
 gulpfile.js
 gulpfile.js.map
