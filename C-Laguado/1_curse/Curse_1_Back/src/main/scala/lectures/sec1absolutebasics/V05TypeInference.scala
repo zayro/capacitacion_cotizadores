@@ -1,5 +1,8 @@
 package lectures.sec1absolutebasics
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V05TypeInference extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   // El compilador puede descifrar (realizar varios pasos) el tipo cuando no especificamos los tipos explicitamente

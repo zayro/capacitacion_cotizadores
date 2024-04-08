@@ -1,5 +1,8 @@
 package lectures.sec2oop
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V10PooBasic1 extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   val person = new Person("Carlos", 26)

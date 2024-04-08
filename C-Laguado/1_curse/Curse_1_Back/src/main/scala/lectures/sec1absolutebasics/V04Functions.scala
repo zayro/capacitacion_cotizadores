@@ -1,7 +1,11 @@
 package lectures.sec1absolutebasics
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V04Functions extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
+
   def functionA(a: String, b: Int): String = {
     a + " " + b
   }

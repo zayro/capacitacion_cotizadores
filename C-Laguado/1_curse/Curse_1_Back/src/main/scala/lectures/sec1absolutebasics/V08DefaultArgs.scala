@@ -1,5 +1,8 @@
 package lectures.sec1absolutebasics
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V08DefaultArgs extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   def trFact(n: Int, acum: Int = 1): Int =

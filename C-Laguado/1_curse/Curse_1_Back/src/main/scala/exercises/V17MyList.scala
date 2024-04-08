@@ -1,5 +1,8 @@
 package exercises
 
+/*
+ * @author: Carlos.Laguado
+ */
 abstract class V17MyList {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   /*

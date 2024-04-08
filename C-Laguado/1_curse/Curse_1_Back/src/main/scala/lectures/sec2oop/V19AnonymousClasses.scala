@@ -1,5 +1,8 @@
 package lectures.sec2oop
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V19AnonymousClasses extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   abstract class Animal {

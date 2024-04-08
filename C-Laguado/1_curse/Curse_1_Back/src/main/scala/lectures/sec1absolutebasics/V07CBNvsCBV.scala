@@ -1,5 +1,8 @@
 package lectures.sec1absolutebasics
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V07CBNvsCBV extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   //Se calcula antes, de que la funcion evalue el valor

@@ -45,7 +45,12 @@ class QueryController @Inject()(db: Database) extends Controller {
           Articles(id, name, idType, isActive) // Crea una instancia del (case class)
       }.toList
       println("articlesResult: " + articlesResult)
-      Ok(Json.toJson(articlesResult))
+      Ok(Json.toJson(articlesResult)).withHeaders(
+        ACCESS_CONTROL_ALLOW_ORIGIN -> "*",
+        ACCESS_CONTROL_ALLOW_METHODS -> getMethods().toString,
+        ACCESS_CONTROL_MAX_AGE -> "300",
+        ACCESS_CONTROL_ALLOW_HEADERS -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User - Agent"
+      )
     }
   }
 
@@ -70,7 +75,12 @@ class QueryController @Inject()(db: Database) extends Controller {
         Articles(id, name, idType, isActive) // Crea una instancia del (case class)
       }.toList
       println("articlesActive: " + articlesActive)
-      Ok(Json.toJson(articlesActive))
+      Ok(Json.toJson(articlesActive)).withHeaders(
+        ACCESS_CONTROL_ALLOW_ORIGIN -> "*",
+        ACCESS_CONTROL_ALLOW_METHODS -> getMethods().toString,
+        ACCESS_CONTROL_MAX_AGE -> "300",
+        ACCESS_CONTROL_ALLOW_HEADERS -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User - Agent"
+      )
     }
   }
 
@@ -83,7 +93,12 @@ class QueryController @Inject()(db: Database) extends Controller {
       addstmt.setObject(2, (jsVal \ "idType").as[Int]);
       addstmt.execute();
       println("Article created");
-      Created(jsVal)
+      Created(jsVal).withHeaders(
+        ACCESS_CONTROL_ALLOW_ORIGIN -> "*",
+        ACCESS_CONTROL_ALLOW_METHODS -> getMethods().toString,
+        ACCESS_CONTROL_MAX_AGE -> "300",
+        ACCESS_CONTROL_ALLOW_HEADERS -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User - Agent"
+      )
     }
   }
 
@@ -99,7 +114,12 @@ class QueryController @Inject()(db: Database) extends Controller {
         updateStmt.setObject(4, id);
         updateStmt.execute();
         println("Article updated");
-        Created(Json.toJson(articleExistsById(id)))
+        Created(Json.toJson(articleExistsById(id))).withHeaders(
+          ACCESS_CONTROL_ALLOW_ORIGIN -> "*",
+          ACCESS_CONTROL_ALLOW_METHODS -> getMethods().toString,
+          ACCESS_CONTROL_MAX_AGE -> "300",
+          ACCESS_CONTROL_ALLOW_HEADERS -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User - Agent"
+        )
       } else {
         NotFound("No existe registro para actualizar")
       }
@@ -114,7 +134,12 @@ class QueryController @Inject()(db: Database) extends Controller {
         updateStmt.setObject(1, id);
         updateStmt.execute();
         println("Article delete");
-        Ok("Article delete")
+        Ok("Article delete").withHeaders(
+          ACCESS_CONTROL_ALLOW_ORIGIN -> "*",
+          ACCESS_CONTROL_ALLOW_METHODS -> getMethods().toString,
+          ACCESS_CONTROL_MAX_AGE -> "300",
+          ACCESS_CONTROL_ALLOW_HEADERS -> "Origin, X-Requested-With, Content-Type, Accept, Referer, User - Agent"
+        )
       } else {
         NotFound("No existe registro para eliminar")
       }
@@ -136,4 +161,7 @@ class QueryController @Inject()(db: Database) extends Controller {
     }
   }
 
+  def getMethods() {
+    "GET, POST, PUT, DELETE"
+  }
 }

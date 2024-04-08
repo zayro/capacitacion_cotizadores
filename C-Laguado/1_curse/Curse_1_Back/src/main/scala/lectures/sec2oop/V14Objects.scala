@@ -1,5 +1,8 @@
 package lectures.sec2oop
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V14Objects extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   // SCALA DOES NOT HAVE CLASS-LEVEL FUNCTIONALITY (no conoce el concepto de "static")

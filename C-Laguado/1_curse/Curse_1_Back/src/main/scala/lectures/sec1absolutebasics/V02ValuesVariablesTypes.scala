@@ -1,5 +1,8 @@
 package lectures.sec1absolutebasics
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V02ValuesVariablesTypes extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   val int1: Int = 1

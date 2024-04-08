@@ -1,7 +1,10 @@
 package lectures.sec2oop
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V18Generics extends App {
-
+  // Para ejecutar oprimir [Ctrl + Shift + F10]
   class MyListClass[A] { // A es un parametro de tipo
     // use the type A           {??? // exresion que no devuelve nada (no arroja error porque se implementara)}
       // [+A]: Covariant      (:Animal  ->  new Cat)     - type substitution (broad: polymorphism)

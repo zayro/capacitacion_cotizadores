@@ -1,5 +1,8 @@
 package lectures.sec2oop
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V15Inheritance1 extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   // single class inheritance

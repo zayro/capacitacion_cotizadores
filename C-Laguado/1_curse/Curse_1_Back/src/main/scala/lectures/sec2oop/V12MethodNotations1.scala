@@ -2,6 +2,9 @@ package lectures.sec2oop
 
 import scala.language.postfixOps
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V12MethodNotations1 extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   class Person(val name: String, favoriteMovie: String, val age: Int = 0) {

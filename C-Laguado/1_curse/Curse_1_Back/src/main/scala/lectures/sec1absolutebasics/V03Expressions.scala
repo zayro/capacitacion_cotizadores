@@ -1,5 +1,8 @@
 package lectures.sec1absolutebasics
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V03Expressions extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   val exp1 = 1 + 2 // EXPRESSION

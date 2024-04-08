@@ -2,6 +2,9 @@ package lectures.sec1absolutebasics
 
 import scala.annotation.tailrec
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V06Recursion extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   def factorial(n: Int): Int =

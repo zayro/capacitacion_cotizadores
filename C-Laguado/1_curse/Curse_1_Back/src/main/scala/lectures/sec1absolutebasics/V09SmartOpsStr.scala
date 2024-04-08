@@ -1,5 +1,8 @@
 package lectures.sec1absolutebasics
 
+/*
+ * @author: Carlos.Laguado
+ */
 object V09SmartOpsStr extends App {
   // Para ejecutar oprimir [Ctrl + Shift + F10]
   val str: String = "Hello, I am learning Scala"
