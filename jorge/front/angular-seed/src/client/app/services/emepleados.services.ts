@@ -9,20 +9,21 @@ import { EMPLEADOS } from '../shared/empleados/mock';
 })
 export class Empleadoservice {
 
-  empleadosUrl = 'http://localhost:9000/asesores';  
+  //empleadosUrl = 'http://localhost:9000/asesores';  
+  empleadosUrl = 'https://apicomapany.free.beeceptor.com/sellers'; 
 
   constructor(private http: HttpClient) { }
 
   getEmpleadosLocal(): Empleado[] {
     return EMPLEADOS;
   }
+
   getEmpleadosLocalObs(): Observable<Empleado[]> {
     return of(EMPLEADOS);
   }
 
   getEmpleadosApiObs(): Observable<Empleado[]> {
-    const headers = { 'Access-Control-Allow-Origin': '*'};
-    return this.http.get<Empleado[]>(this.empleadosUrl, { headers });
+    return this.http.get<Empleado[]>(this.empleadosUrl);
   }
 
   postEmpleadosApiObs(empleado: Empleado): Observable<Empleado[]> {

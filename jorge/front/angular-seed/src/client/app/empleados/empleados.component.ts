@@ -25,15 +25,18 @@ export class EmpleadosComponent implements OnInit {
 
   ngOnInit() {
     this.empleado = {id: 0, names: '', email: '', country: ''};
-    this.getEmpleadosLocal();
+    this.getEmpleadosApi();
+
   }
 
   getEmpleadosLocal(): void {
     this.empleados = this.empleadoservice.getEmpleadosLocal();
+
   }
   
   getEmpleadosApi(): void {
     this.empleadoservice.getEmpleadosApiObs().subscribe(empleados => this.empleados = empleados);
+
   }
 
   onSelect(empleado: Empleado): void {
@@ -41,6 +44,7 @@ export class EmpleadosComponent implements OnInit {
     this.empleado = empleado;
     this.esEditar = true;
     this.txtAccion = 'Editar ';
+
   }
 
   onClickNuevo(): void {
@@ -59,23 +63,19 @@ export class EmpleadosComponent implements OnInit {
     if (!dataForm.value.txtEmail.trim()) { alert('Ingrese su email'); error = true; } else
     if (!dataForm.value.txtCountry.trim()) { alert('Ingrese su country'); error = true; }
 
-    if (!error) {
-      
+    if (!error) {      
       if (!this.esEditar) {
-
         this.empleados.push(
           {id: this.newId, names: dataForm.value.txtNames, email: dataForm.value.txtEmail,
              country: dataForm.value.txtCountry});
         this.newId++;
         
       }
-
       this.empleado = {id: 0, names: '', email: '', country: ''};
 
       this.mostrar = false;
       this.txtAccion = 'Listado de';
-    }   
-
+    }
     return false;
 
   }
