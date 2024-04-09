@@ -1,0 +1,69 @@
+<div class="container">
+    <br />
+    <br />
+    <div class="col-12 text-center">
+        <h2 i18n>{{ txtAccion }} Empleados</h2>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <button (click)="onClickNuevo()">Nuevo</button> 
+        </div>
+    </div>
+    <br />
+    <br />
+    <form #dataForm = "ngForm" (submit)="onSubmit(dataForm)" [ngFormOptions]="{updateOn: 'submit'}">
+        <div class="row" *ngIf="mostrar">
+            <div class="mb-3 row" *ngIf="esEditar">
+                <label for="txtId" class="col-sm-2">Id</label>
+                <div class="col-sm-10">
+                <input type="text" required  readonly class="form-control-plaintext" name="txtId" placeholder="1" [(ngModel)]="empleado.id">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="txtNames" class="col-sm-2">Names</label>
+                <div class="col-sm-10">
+                    <input type="text" required  name="txtNames" placeholder="Ingresa el Names"  [(ngModel)]="empleado.names">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="txtEmail" class="col-sm-2">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" required  name="txtEmail" placeholder="Ingresa el Email"  [(ngModel)]="empleado.email">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="txtCountry" class="col-sm-2">Country</label>
+                <div class="col-sm-10">
+                    <input type="text" required  name="txtCountry" placeholder="Ingresa el Country"  [(ngModel)]="empleado.country">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <button class="btn btn-primary btn-sm" type="submit">Guardar</button>&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-danger btn-sm" (click)="onClickCancelar()">Cancelar</button> 
+                </div>
+            </div>
+        </div>
+    </form>
+    <br /><br />
+    <div class="row" *ngIf="!mostrar">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Names</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of empleados">
+                    <td class="btn btn-link" scope="row" (click)="onSelect(empleado)">{{ empleado.id }}</td>
+                    <td>{{ empleado.names }}</td>
+                    <td>{{ empleado.email }}</td>
+                    <td>{{ empleado.country }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
