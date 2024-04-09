@@ -169,16 +169,16 @@ object ListTest20 extends App {
 
   println(" // //////////////////////////////////////////////////////////////////////////// // ")
 
-  val cloneListOfIntegers1: V21MyList[Int] = new ConsClass21(1, new ConsClass21(2, new ConsClass21(3, EmptyObject21)))
+  val cloneListOfIntegers1: V20MyList[Int] = new ConsClass20(1, new ConsClass20(2, new ConsClass20(3, EmptyObject20)))
   println("listOfIntegers1.toString:                   -> " + listOfIntegers1.toString)
   println("cloneListOfIntegers1.toString:              -> " + cloneListOfIntegers1.toString)
   println("( listOfIntegers1 == cloneListOfIntegers1 ) -> " + (listOfIntegers1 == cloneListOfIntegers1) + " " +
     " { para estas listas (class) serían diferentes } ")
   println(" ++ +++++ ++ ")
-  
-  // Si no se utiliza la palabra clave (case class), para que sean iguales, se necesitaria definir un metodo recursivo 
+
+  // Si no se utiliza la palabra clave (case class), para que sean iguales, se necesitaria definir un metodo recursivo
   //  que hubiese sido acordado para una lista, porque necesitaria comparar todos los elementos recursivamente
-  
+
   // Esta caracteristica se agrega son escribir una sola linea, tan solo con escribir la palabra clave (case class)
-  //  como se puede evidenciar en la lista del archivo V21MyList.
+  //  como se puede evidenciar en la lista del archivo V20MyList.
 }
